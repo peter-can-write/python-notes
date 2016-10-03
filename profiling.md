@@ -146,7 +146,7 @@ def foo():
   pass
 ```
 
-Lastly, simply call `kernprof -lv module_to_profile.py`. This will pick up all functions with the `@profile` decorator and output a detailed line-by-line analysis of the runtime of the function:
+Lastly, simply call `kernprof -lv module_to_profile.py`. This will pick up all functions with the `@profile` decorator and output a detailed line-by-line analyzis of the runtime of the function:
 
 
 Note that because the `profile` decorator will not actually be defined anywhere in your code, you will want to add some "shims" for testing or other cases where you are not profiling the function:
@@ -178,7 +178,7 @@ def foo():
   return l[1]
 ```
 
-Then, running `python -m memory_profiler module_to_profile.py` will output a similar analysis as `line_profiler`. However, additionally, we can run `mprof run module_to_profile.py`. This will record and store a statistics file. If we then run `mprof plot`, the last such statistics file generated will be plotted using `matplotlib` (you'll want to have that installed).
+Then, running `python -m memory_profiler module_to_profile.py` will output a similar analyzis as `line_profiler`. However, additionally, we can run `mprof run module_to_profile.py`. This will record and store a statistics file. If we then run `mprof plot`, the last such statistics file generated will be plotted using `matplotlib` (you'll want to have that installed).
 
 Furthermore, for precisely this functionality, you can add checkpoints to your program using `profile.timestamp('name_of_the_checkpoint')`. This will then be shown on the timeline in the plot:
 
